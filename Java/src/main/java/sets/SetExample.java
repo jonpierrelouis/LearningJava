@@ -14,7 +14,7 @@ public class SetExample {
 
     public static void main(String[] args) {
         simpleHashSet();
-        
+
     }
 
     static void simpleHashSet(){
