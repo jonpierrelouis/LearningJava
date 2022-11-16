@@ -1,5 +1,9 @@
 package CodingChallenges.Pangram;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Pangram {
 
     /**
@@ -9,6 +13,26 @@ public class Pangram {
      * @return write a method that returns true if a sentence is a pangram.
      */
     public boolean isPangram(String in){
-        return false;
+
+        //get a list of letters
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        char[] letters = alphabet.toCharArray();
+
+        //convert input string to a set
+        char[] inputString = in.toCharArray();
+        Set<Character> setString = new HashSet<>();
+
+        for(char i : inputString){
+            setString.add(i);
+        }
+
+        //check to see if the input string contains a letter from the alphabet
+        for(char i : letters){
+            if(!setString.contains(i)){
+                return false;
+            }
+        }
+
+        return true;
     }
 }
