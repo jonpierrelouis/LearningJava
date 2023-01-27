@@ -1,5 +1,7 @@
 package CodingChallenges.RemoveAllCharacter;
 
+import java.util.Arrays;
+
 public class RemoveAllCharacter {
 
     /**
@@ -10,16 +12,6 @@ public class RemoveAllCharacter {
      */
     public String removeAll(String str, String ch){
 
-        char[] charArr = str.toCharArray();
-        char[] remove = ch.toCharArray();
-
-        String ans = "";
-        for(char i : charArr){
-            if(i != remove[0] ){
-                ans += i;
-            }
-        }
-
-        return ans;
+        return str.replace(ch, "");
     }
 }
